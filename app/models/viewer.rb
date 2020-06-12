@@ -11,5 +11,17 @@ class Viewer
   def self.all
     @@all
   end
+
+  def reviews
+  
+    reviews = Review.all.select {|review| review.viewer == self}
+    reviews
+    binding.pry
+  end
+  def reviewed_movies
+    review = Review.all.select {|review| review.viewer == self }
+    reviews.map {|review| review.movie }
+  end
+    
   
 end
