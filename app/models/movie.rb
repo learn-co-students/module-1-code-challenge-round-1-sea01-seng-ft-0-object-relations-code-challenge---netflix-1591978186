@@ -5,11 +5,19 @@ class Movie
 
   def initialize(title)
     @title = title
-    self.class.all << self
+    @@all << self
   end
 
   def self.all
     @@all
   end
 
+def reviews
+  Review.all.find_all {|reviews| reviews.movie == self}
+end
+
+def average_rating
+  total = Review.all.collect {|reviews| reviews.rating}
+  total.sum / total.length
+end
 end
