@@ -10,7 +10,19 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+ronak = Viewer.new("Ronak")
+krish = Viewer.new("Krish")
+jenifer = Viewer.new("Jenifer")
 
+
+
+terminator = Movie.new("Terminetor")
+xman = Movie.new("Xman")
+
+
+review1 = Review.new(ronak, terminator, 5)
+review2 = Review.new(ronak, terminator, 3)
+review3 = Review.new(krish, xman, 5)
 
 
 
